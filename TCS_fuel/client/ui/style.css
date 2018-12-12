@@ -1,0 +1,100 @@
+@font-face {
+	font-family: bebas;
+	src: url(BebasNeue_Bold.otf);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+.gasStation {
+  position: absolute;
+  bottom: 0%;
+  right: 2%;
+
+
+  height: 30vh;
+  width: 15vw;
+
+
+}
+
+
+.gasStation #station {
+  height: 26vh;
+  width: 100%;
+}
+
+
+.gasStation #station #prices {
+  position: absolute;
+  top: 1.5vh;
+	left: -6.5%;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+span{
+	text-align: center;
+}
+
+span:nth-child(1) {
+  font-family: bebas;
+  font-weight: bold;
+  font-size: 2.7vh;
+}
+
+
+span:nth-child(2) {
+  color: red;
+  font-family: bebas;
+  line-height: 1.5vh;
+  font-size: 2vh;
+}
+
+.gasStation #progressBar {
+  position: absolute;
+  bottom: 2vh;
+
+  height: 24px;
+  width: 100%;
+
+  background-color: #444;
+
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  border: 1px #222 solid;
+  border-radius: 5px;
+
+  overflow:hidden;
+}
+
+.gasStation #progressBar #progress {
+  height: 100%;
+  width: 50%;
+
+  background-color: #D69C32;
+}
+
+
+img {
+  height: 25vh;
+  width: auto;
+
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 3px;
+}

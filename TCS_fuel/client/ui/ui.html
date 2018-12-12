@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TCS_fuel - By n0thus</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="gasStation">
+      <div id="station">
+        <img src="gasStation.png" alt="">
+        <div id="prices">
+          <span class="liters">100L</span>
+          <span class="curPrice">20$</span>
+        </div>
+      </div>
+      <div id="progressBar">
+        <div id="progress">
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function toggleFuelStation(current, prices) {
+      $("#station").toggle( "slide" );
+      $("#prices").hide();
+
+      setFuelStation(current, prices);
+
+      setTimeout(function() {
+        $("#prices").toggle( "slide" );
+      },500)
+
+    }
+
+    function setFuelStation(current, prices) {
+      $(".liters").replaceWith('<span class="liters">'+current+'L</span>');
+      $(".curPrice").replaceWith('<span class="curPrice">'+prices+'$</span>');
+    }
+
+    function toggleFuelBar(current) {
+      $("#progressBar").toggle( "slide" );
+      setFuelBar(current);
+    }
+
+    function setFuelBar(current) {
+      $("#progress").css("width", current+"%");
+    }
+
+
+    $(document).ready(function() {
+      $("#station").hide();
+      $("#progressBar").hide();
+    });
+
+    window.onload = function(e){
+        // NUI Callback
+        window.addEventListener('message', function(event){
+            var mes = event.data;
+
+            if(mes.toggleBar != null) {
+                toggleFuelBar(mes.fuel);
+            }
+
+            if(mes.toggleFuelStation != null) {
+                toggleFuelStation(mes.asked, mes.price);
+            }
+
+
+
+            if(mes.setBar != null) {
+              setFuelBar(mes.fuel);
+            }
+
+            if(mes.setFuelStation != null) {
+              setFuelStation(mes.asked, mes.price);
+            }
+
+        });
+    };
+
+
+  </script>
+</html>
