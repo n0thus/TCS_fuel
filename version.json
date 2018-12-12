@@ -1,0 +1,12 @@
+{
+  "version":"0.0.1",
+  "patchnote" : [
+    "- Random fuel",
+    "- Boats, Petrol cars, Electric cars, Planes, Helicopters",
+    "- Random prices",
+    "- Consumption determined by speed",
+    "- Custom consumption for each types of vehicles",
+    "- Custom refuel speed",
+    "- Use fuel natives or not"
+  ]
+}
