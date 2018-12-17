@@ -1,12 +1,7 @@
 {
-  "version":"0.0.1",
+  "version":"0.0.2",
   "patchnote" : [
-    "- Random fuel",
-    "- Boats, Petrol cars, Electric cars, Planes, Helicopters",
-    "- Random prices",
-    "- Consumption determined by speed",
-    "- Custom consumption for each types of vehicles",
-    "- Custom refuel speed",
-    "- Use fuel natives or not"
+    "- Fix issues when you leave your car.",
+    "- Fix issues with the UI."
   ]
 }

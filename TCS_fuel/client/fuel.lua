@@ -177,11 +177,21 @@ Citizen.CreateThread(function()
       else
         if(nearestStation ~= nil) then
           nearestStation = nil
+          SendNUIMessage({
+            toggleFuelStation = false,
+            asked = 0.0,
+            price = 0.0
+          })
         end
       end
     else
       if(nearestStation ~= nil) then
         nearestStation = nil
+        SendNUIMessage({
+          toggleFuelStation = false,
+          asked = 0.0,
+          price = 0.0
+        })
       end
     end
   end

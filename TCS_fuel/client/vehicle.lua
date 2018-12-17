@@ -131,7 +131,7 @@ function manageVehicle()
   self.refuel = function(toAdd)
     SetVehicleUndriveable(self.vehicle, true)
     local fuelBefore = self.fuel
-    while(self.fuel < (fuelBefore+toAdd)) do
+    while(self.fuel < (fuelBefore+toAdd) and GetVehiclePedIsIn(PlayerPedId()) == self.vehicle) do
       Citizen.Wait(20)
       self.fuel = self.fuel + (refuelSpeed/1000)*20
 
