@@ -1,11 +1,12 @@
 local vehObj = nil
 local nearestStation = nil
+local inSelection = false
 Citizen.CreateThread(function()
   TriggerServerEvent("TCS_fuel:getPricesForStations")
   addBlips()
 
   local askedLiters = 0.0
-  local inSelection = false
+
 
   while true do
     Citizen.Wait(1)
@@ -177,21 +178,28 @@ Citizen.CreateThread(function()
       else
         if(nearestStation ~= nil) then
           nearestStation = nil
-          SendNUIMessage({
-            toggleFuelStation = false,
-            asked = 0.0,
-            price = 0.0
-          })
+          if(inSelection) then
+            SendNUIMessage({
+              toggleFuelStation = false,
+              asked = 0.0,
+              price = 0.0
+            })
+            inSelection=false
+          end
         end
       end
     else
       if(nearestStation ~= nil) then
         nearestStation = nil
-        SendNUIMessage({
-          toggleFuelStation = false,
-          asked = 0.0,
-          price = 0.0
-        })
+
+        if(inSelection) then
+          SendNUIMessage({
+            toggleFuelStation = false,
+            asked = 0.0,
+            price = 0.0
+          })
+          inSelection=false
+        end
       end
     end
   end

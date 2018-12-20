@@ -1,7 +1,6 @@
 {
-  "version":"0.0.2",
+  "version":"0.0.3",
   "patchnote" : [
-    "- Fix issues when you leave your car.",
-    "- Fix issues with the UI."
+    "- Fix lastest issues with the UI."
   ]
 }
