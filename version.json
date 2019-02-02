@@ -1,6 +1,8 @@
 {
-  "version":"0.0.3",
+  "version":"0.0.5",
   "patchnote" : [
-    "- Fix lastest issues with the UI."
+    "- Fix issues with motorbikes.",
+    "- Changing a condition in the vehicle.lua file.",
+    "- Fixing the SetVehicleUndriveable and SetVehicleEngineOn natives on the initialisation of the vehicle (vehicle.lua)."
   ]
 }

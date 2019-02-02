@@ -6,7 +6,7 @@ lang = "en"
 --[[
 	DO NOT MODIFIY
 ]]--
-VERSION = "0.0.1"
+VERSION = "0.0.5"
 
 --[[
 	MINIMUM AND MAXIMUM FUEL LEVEL FOR RANDOM, IN PERCENT
@@ -37,6 +37,18 @@ electric_model = {
 	"CADDY2",
 	"AIRTUG"
 }
+
+
+blacklistedModels = { -- Vehicles which doesn't need fuel (Bikes)
+	"BMX",
+	"CRUISER",
+	"TRIBIKE2",
+	"FIXTER",
+	"SCORCHER",
+	"TRIBIKE3",
+	"TRIBIKE"
+}
+
 
 
 

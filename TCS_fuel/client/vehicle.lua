@@ -22,6 +22,19 @@ function manageVehicle()
   end
 
 
+
+  self.isBike = function(vehicle)
+    local vehModel = GetEntityModel(vehicle)
+
+    local cpt = 1
+    while(cpt<=#blacklistedModels and GetHashKey(blacklistedModels[cpt])~=vehModel) do
+      cpt = cpt+1
+    end
+
+    return (cpt<=#blacklistedModels)
+  end
+
+
   self.isBlacklisted = function()
     return self.blacklisted
   end
@@ -58,8 +71,8 @@ function manageVehicle()
   end
 
   self.init = function(vehicle)
-    SetVehicleUndriveable(self.vehicle, false)
-    SetVehicleEngineOn(self.vehicle, true, false, false)
+    SetVehicleUndriveable(vehicle, false)
+    SetVehicleEngineOn(vehicle, true, false, false)
 
     self.vehicle = vehicle
     self.plate = GetVehicleNumberPlateText(self.vehicle)
@@ -74,7 +87,7 @@ function manageVehicle()
     elseif(IsPedInAnyBoat(ped)) then
       self.type = 3 -- Boats
       self.consumption = consumptionPerKmForBoat
-    elseif(IsPedInAnyVehicle(ped, false) and (not IsPedOnAnyBike(ped) and not IsPedInAnyTrain(ped) and not IsPedInAnySub(ped))) then
+    elseif(IsPedInAnyVehicle(ped, false) and (not self.isBike(self.vehicle) and not IsPedInAnyTrain(ped) and not IsPedInAnySub(ped))) then
       self.type = 1 -- Petrol Cars
       self.consumption = consumptionPerKmForVehicle
 
@@ -91,7 +104,7 @@ function manageVehicle()
   self.manage = function()
     Citizen.CreateThread(function()
 
-        while(IsPedInAnyVehicle(PlayerPedId()) and GetPedInVehicleSeat(self.vehicle, -1)) do
+        while(IsPedInAnyVehicle(PlayerPedId()) and GetPedInVehicleSeat(self.vehicle, -1) == PlayerPedId()) do
           Citizen.Wait(1000)
 
           if(not self.blacklisted) then
