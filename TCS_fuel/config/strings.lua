@@ -22,7 +22,47 @@ strings["en"] = {
 	["cant_get_version"] = "The verification of the version of TCS_fuel is currently not available."
 }
 
+strings["zh_CN"] = {
+	["key_open_menu_keyboard"] = "按下 ~INPUT_CONTEXT~ 来加油",
+	["key_open_menu_controller"] = "按下 ~INPUT_SCRIPT_RLEFT~ 来加油",
+	["key_select_fuel_keyboard"] = "按下 ~INPUT_CELLPHONE_UP~ 和 ~INPUT_CELLPHONE_DOWN~ 来选择要加多少油",
+	["key_select_fuel_controller"] = "按下 ~INPUT_SCRIPT_PAD_UP~ 和 ~INPUT_SCRIPT_PAD_DOWN 来选择要加多少油",
+	["not_in_the_right_place"] = "~r~你不在正确的位置上",
+	["not_enough_money"] = "~r~你没有足够的金额",
+	["fuel_station"] = "加油站 (#VALUE#)",
+	["station_name_draw"] = "~g~#VALUE# - 加油站 (#VALUE#)",
+	["vehicle"] = "车辆",
+	["vehicle_fuel"] = "汽油车",
+	["vehicle_electric"] = "电动汽车",
+	["vehicle_boat"] = "船",
+	["vehicle_plane"] = "飞机",
+	["vehicle_heli"] = "直升机",
+	["price_per_liters_draw"] = "~b~#VALUE# $/升",
+	["new_version_available"] = "^8A new version of TCS_fuel is available (actual version : #VALUE#, new version : #VALUE#). Check it here : https://github.com/n0thus/TCS_fuel^7\n",
+	["new_version_patchnote"] = "^2The patchnote of this new version is :\n#VALUE#^7",
+	["cant_get_version"] = "The verification of the version of TCS_fuel is currently not available."
+}
 
+strings["zh_TW"] = {
+	["key_open_menu_keyboard"] = "按下 ~INPUT_CONTEXT~ 來加油",
+	["key_open_menu_controller"] = "按下 ~INPUT_SCRIPT_RLEFT~ 來加油",
+	["key_select_fuel_keyboard"] = "按下 ~INPUT_CELLPHONE_UP~ 和 ~INPUT_CELLPHONE_DOWN~ 來選擇要加多少油",
+	["key_select_fuel_controller"] = "按下 ~INPUT_SCRIPT_PAD_UP~ 和 ~INPUT_SCRIPT_PAD_DOWN 來選擇要加多少油",
+	["not_in_the_right_place"] = "~r~你不在正確的位置上",
+	["not_enough_money"] = "~r~你沒有足夠的金額",
+	["fuel_station"] = "加油站 (#VALUE#)",
+	["station_name_draw"] = "~g~#VALUE# - 加油站 (#VALUE#)",
+	["vehicle"] = "車輛",
+	["vehicle_fuel"] = "汽油車",
+	["vehicle_electric"] = "電動汽車",
+	["vehicle_boat"] = "船",
+	["vehicle_plane"] = "飛機",
+	["vehicle_heli"] = "直升機",
+	["price_per_liters_draw"] = "~b~#VALUE# $/升",
+	["new_version_available"] = "^8A new version of TCS_fuel is available (actual version : #VALUE#, new version : #VALUE#). Check it here : https://github.com/n0thus/TCS_fuel^7\n",
+	["new_version_patchnote"] = "^2The patchnote of this new version is :\n#VALUE#^7",
+	["cant_get_version"] = "The verification of the version of TCS_fuel is currently not available."
+}
 
 strings["fr"] = {
 	["key_open_menu_keyboard"] = "Appuyez sur ~INPUT_CONTEXT~ pour acheter de l'essence.",
